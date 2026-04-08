@@ -21,9 +21,14 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["role"] !== "student") {
         <h2 class="error">Login Required</h2>
         <p>You must be logged in as a student to record attendance.</p>
         <br>
-        <a href="login.php?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>">
-            <button>Log In</button>
-        </a>
+        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+            <a href="login.php?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>">
+                <button>Log In</button>
+            </a>
+            <a href="register.php?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>">
+                <button class="btn-secondary">Register</button>
+            </a>
+        </div>
     </div>
     </body>
     </html>
