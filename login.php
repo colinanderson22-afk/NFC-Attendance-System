@@ -40,20 +40,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="abc.css">
+    <link rel="stylesheet" href="abc.css">
+    <title>Login</title>
 </head>
 <body>
 
 <h1>Login</h1>
 <div class="form-box">
-<form method="POST">
-    <input type="email" name="email" placeholder="Email" required><br><br>
-    <button type="submit">Login</button>
-</form>
+    <form method="POST">
+        <input type="email" name="email" placeholder="Email" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+
+    <?php if (isset($error)) echo "<p class='error-msg'>$error</p>"; ?>
+
+    <div style="margin-top: 16px;">
+        <a href="index.php"><button class="btn-secondary">Cancel</button></a>
+    </div>
 </div>
-<?php if (isset($error)) echo "<p class='error-msg'>$error</p>"; ?>
-<a href="index.php">
-<button class="card" onclick="window.location='index.php'">Cancel</button>
-</a>
+
 </body>
 </html>
