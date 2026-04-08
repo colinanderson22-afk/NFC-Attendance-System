@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <option value="professor">Professor</option>
         </select>
 
-        <input type="text"  name="tag_id"     placeholder="NFC Tag ID (students / returning professors)">
+        <input type="text"  name="tag_id"     placeholder="NFC Tag ID (For Students)">
         <small style="color:#888;">Professors creating a new account can leave this blank.</small>
 
         <button type="submit">Register</button>

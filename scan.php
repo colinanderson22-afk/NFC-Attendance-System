@@ -13,41 +13,17 @@ if (!isset($_SESSION["user_id"]) || $_SESSION["role"] !== "student") {
     <!DOCTYPE html>
     <html>
     <head>
+        <link rel="stylesheet" href="abc.css">
         <title>Login Required</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                text-align: center;
-                margin-top: 80px;
-            }
-            .status-box {
-                border: 1px solid #ddd;
-                padding: 40px;
-                width: 350px;
-                margin: auto;
-                border-radius: 10px;
-                box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
-            }
-            .error { color: #e74c3c; }
-            .login-btn {
-                margin-top: 20px;
-                padding: 10px 20px;
-                font-size: 16px;
-                background-color: #3498db;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                text-decoration: none;
-                display: inline-block;
-            }
-        </style>
     </head>
     <body>
-    <div class="status-box">
+    <div class="scan-status-box">
         <h2 class="error">Login Required</h2>
         <p>You must be logged in as a student to record attendance.</p>
-        <a href="login.php?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>" class="login-btn">Log In</a>
+        <br>
+        <a href="login.php?redirect=<?= urlencode($_SERVER['REQUEST_URI']) ?>">
+            <button>Log In</button>
+        </a>
     </div>
     </body>
     </html>
@@ -94,7 +70,6 @@ try {
     }
 
 } catch (PDOException $e) {
-    // Catch any database error
     $success = false;
     $message = "Database error: " . $e->getMessage();
 }
@@ -103,41 +78,12 @@ try {
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="abc.css">
     <title>Attendance Status</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            text-align:center;
-            margin-top:80px;
-        }
-        .status-box{
-            border:1px solid #ddd;
-            padding:40px;
-            width:350px;
-            margin:auto;
-            border-radius:10px;
-            box-shadow:0px 2px 8px rgba(0,0,0,0.15);
-        }
-        .status-box img{
-            width:120px;
-        }
-        .success{ color:#2ecc71; }
-        .error{ color:#e74c3c; }
-        .home-btn{
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
 </head>
 <body>
 
-<div class="status-box">
+<div class="scan-status-box">
     <?php if ($success): ?>
         <img src="checkmark.png" alt="Checkmark">
         <h2 class="success">Attendance Recorded</h2>
@@ -146,9 +92,10 @@ try {
     <?php endif; ?>
 
     <p><?php echo htmlspecialchars($message); ?></p>
-    <p><?php echo date("F j, Y g:i A"); ?></p>
+    <p style="margin-top: 6px; font-size: 0.88rem;"><?php echo date("F j, Y g:i A"); ?></p>
 
-    <a href="student_home.php"><button class="home-btn">Return to Home</button></a>
+    <br>
+    <a href="student_home.php"><button>Return to Home</button></a>
 </div>
 
 </body>

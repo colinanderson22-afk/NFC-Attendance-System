@@ -112,7 +112,7 @@ $checked_days = $_POST["course_days"] ?? [];
 </head>
 <body>
 <div class="form-box">
-    <h2>Create Course + Assign NFC Tag</h2>
+    <h2>Create Course & Assign ID</h2>
 
     <?php if (isset($error)): ?>
         <p class="error-msg"><?php echo htmlspecialchars($error); ?></p>
@@ -126,13 +126,13 @@ $checked_days = $_POST["course_days"] ?? [];
                required
                value="<?php echo htmlspecialchars($_POST['course_name'] ?? ''); ?>">
 
-        <label class="field-label">Class Date &amp; Time (first occurrence)</label>
+        <label class="field-label">Class Date &amp; Time</label>
         <input type="datetime-local"
                name="course_datetime"
                required
                value="<?php echo htmlspecialchars($_POST['course_datetime'] ?? ''); ?>">
 
-        <label class="field-label">Recurring Days (optional)</label>
+        <label class="field-label">Weekly Occurance (Optional)</label>
         <div class="days-group">
             <?php foreach (["M" => "M", "TU" => "Tu", "W" => "W", "TR" => "Th", "F" => "F"] as $val => $label): ?>
                 <div class="day-btn">
@@ -148,12 +148,12 @@ $checked_days = $_POST["course_days"] ?? [];
 
         <input type="text"
                name="tag_id"
-               placeholder="NFC Tag ID"
+               placeholder="Create an ID (Example: ABC123)"
                required
                value="<?php echo htmlspecialchars($_POST['tag_id'] ?? ''); ?>">
         <input type="text"
                name="description"
-               placeholder="Description (optional)"
+               placeholder="Course Description (Optional)"
                value="<?php echo htmlspecialchars($_POST['description'] ?? ''); ?>">
 
         <button type="submit">Create Course</button>

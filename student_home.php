@@ -26,7 +26,7 @@ $courses = $stmt->fetchAll();
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="foundation.css">
+    <link rel="stylesheet" href="abc.css">
     <title>Student Dashboard</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
