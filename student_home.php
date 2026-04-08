@@ -45,7 +45,11 @@ $courses = $stmt->fetchAll();
 <body>
 <h1>Student Dashboard</h1>
 <h2>Welcome, <?php echo htmlspecialchars($user['Name']); ?>!</h2>
-<br><br>
+
+<div style="text-align: center; margin: 16px 0 28px;">
+    <a href="register.php"><button>+ Enroll in Another Course</button></a>
+</div>
+
 <h2>Your Courses</h2>
 
 <?php if (empty($courses)): ?>
