@@ -22,7 +22,8 @@ if (isset($_SESSION["user_id"])) {
     <style>
         .title-card {
             background: linear-gradient(135deg, #1a1d23 0%, #2c3e6b 100%);
-            border-radius: 16px;
+	    border-radius: 16px;
+	    text-align: center;
             padding: 48px 40px 40px;
             max-width: 480px;
             margin: 48px auto 32px;
@@ -50,7 +51,7 @@ if (isset($_SESSION["user_id"])) {
         .title-card p {
             color: rgba(255,255,255,0.6);
             font-size: 1rem;
-            margin: 0;
+	    margin: 0;
             position: relative;
         }
 

@@ -270,7 +270,7 @@
             <div class="title">Senior · Information Science · Christopher Newport University</div>
             <p>
                 Colin is a senior at Christopher Newport University pursuing a degree in Information Science.
-                ABC Attendance was built as his capstone project — a hands-on demonstration of how modern
+                ABC Attendance was built as his capstone project; A hands-on demonstration of how modern
                 web technologies and hardware (NFC tags) can come together to solve a real, everyday
                 problem on university campuses.
             </p>
@@ -281,14 +281,13 @@
     <div class="info-section">
         <h3><span class="icon">🎯</span> Project Goal</h3>
         <p>
-            Traditional attendance methods — paper sign-in sheets, manual roll calls, clicker devices — are
-            slow, error-prone, and frustrating for both professors and students. ABC Attendance was designed
+            Traditional attendance methods like paper sign-in sheets, manual roll calls, clicker devices are
+            slow, prone to error, and frustrating for both professors and students. ABC Attendance was designed
             to make the entire process <strong>frictionless</strong>.
         </p>
         <p style="margin-top: 10px;">
             A professor sets up a course once, writes a URL to a cheap NFC tag (or prints a QR code),
-            and places it at the door. Students tap their phone on the way in — attendance is recorded
-            instantly, no app download required.
+            and presents to students during class time. Students tap their phone on the NFC tag and attendance is recorded instantly, nothing else required.
         </p>
     </div>
 
@@ -298,16 +297,16 @@
         <ul>
             <li><strong>Professors</strong> create courses and assign a unique NFC tag or QR code to each one.</li>
             <li>At the start of class, the professor opens a session from their dashboard.</li>
-            <li><strong>Students</strong> tap the NFC tag (or scan the QR code) with their phone — no app, just a browser.</li>
+            <li><strong>Students</strong> tap the NFC tag (or scan the QR code) with their smartphone's web browser.</li>
             <li>Attendance is marked <em>present</em> in real time. Students who don't scan are marked <em>absent</em> automatically when the session ends.</li>
-            <li>Professors can view per-student attendance history and session logs at any time.</li>
+            <li>Professors can view student attendance and logged session history at any time.</li>
         </ul>
     </div>
 
     <!-- Tech stack -->
     <div class="info-section">
         <h3><span class="icon">🛠️</span> Built With</h3>
-        <p>ABC Attendance runs on a straightforward, server-side stack — no heavy frameworks, just clean fundamentals.</p>
+        <p>ABC Attendance runs on a straightforward server-side stack via AWS EC2.</p>
         <div class="tech-pills">
             <span class="pill">PHP</span>
             <span class="pill">MySQL</span>
@@ -315,24 +314,23 @@
             <span class="pill">HTML / CSS</span>
             <span class="pill">NFC Tags</span>
             <span class="pill">QR Codes</span>
-            <span class="pill">AWS EC2</span>
+            <span class="pill">AWS EC2 Linux</span>
         </div>
     </div>
 
     <!-- Placeholder sections for Colin to fill in -->
-    <div class="info-section" style="border: 2px dashed #c7d4f5; background: #f8faff;">
-        <h3><span class="icon">📚</span> Academic Context <span style="font-size:0.75rem; color:#9ca3af; font-family:'Inter',sans-serif; font-weight:400;">(suggested — fill in)</span></h3>
-        <p style="color:#9ca3af; font-style: italic;">
-            e.g. What course / department is this for? Is there a faculty advisor or sponsor?
-            What semester did you build it? Any research or papers that inspired the approach?
+    <div class="info-section">
+        <h3><span class="icon">📚</span> Academic Context </h3>
+        <p>
+            This system was created to support professors who find that attendance is key for their course, this is likely most relevant in lower level college courses that are lecture-based. This project acts as proof of concept for what an attendance system could look like if it were adapted by CNU using their RFID ID card system. 
         </p>
     </div>
 
-    <div class="info-section" style="border: 2px dashed #c7d4f5; background: #f8faff;">
-        <h3><span class="icon">🔮</span> Future Plans <span style="font-size:0.75rem; color:#9ca3af; font-family:'Inter',sans-serif; font-weight:400;">(suggested — fill in)</span></h3>
-        <p style="color:#9ca3af; font-style: italic;">
-            e.g. Bluetooth/BLE detection, an iOS/Android native app, LMS integrations (Canvas, Blackboard),
-            analytics exports for professors, or department-wide rollout plans.
+    <div class="info-section">
+        <h3><span class="icon">🔮</span> The Project's Future </h3>
+        <p>
+            The trajectory of this project may very well continue after graduation, some potential updates may include an iOS/Android mobile app, LMS integrations (Canvas, Blackboard),
+            analytics exports for professors, or department-wide deployment.
         </p>
     </div>
 
