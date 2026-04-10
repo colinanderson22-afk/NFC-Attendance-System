@@ -111,14 +111,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <option value="professor">Professor</option>
         </select>
 
-        <input type="text"  name="tag_id"     placeholder="NFC Tag ID (For Students)">
-        <small style="color:#888;">Professors creating a new account can leave this blank.</small>
-
-        <button type="submit">Register</button>
-    </form>
+<input type="text"  name="tag_id"     placeholder="NFC Tag ID (STUDENTS ONLY)"><br>
+	<button type="submit">Register</button>
+</form><br>
+<a href="index.php"><button class="btn-secondary">Cancel</button>
 </div>
-<a href="index.php">
-    <button class="card">Cancel</button>
 </div>
 </body>
 </html>
